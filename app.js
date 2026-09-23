@@ -14,7 +14,6 @@
     frame.style.display = 'none';
     return;
   }
-  frame.src = url;
   window.addEventListener('message', function (event) {
     if (event.source !== frame.contentWindow) return;
     var data = event.data || {};
@@ -23,6 +22,10 @@
     if (!isFinite(height) || height < 300) return;
     frame.style.height = Math.ceil(height + 8) + 'px';
   });
+  frame.src = url;
   frame.addEventListener('load', function () { message.textContent = ''; });
+  frame.addEventListener('load', function () {
+    frame.contentWindow.postMessage({ source: 'consciousness-expert-study-parent', type: 'request-height' }, '*');
+  });
   frame.addEventListener('error', function () { message.textContent = 'The study application could not be loaded. Please try again later.'; });
 }());

@@ -19,6 +19,6 @@ h2 { margin:0 0 10px; font-size:25px; }
 .details-grid span { color:var(--muted); font-size:13px; }
 .study-frame-card { margin-top:22px; }
 .frame-message { min-height:0; margin-bottom:8px; color:#a52b24; }
-iframe { display:block; width:100%; height:760px; border:0; border-radius:16px; background:transparent; }
+iframe { display:block; width:100%; height:1200px; border:0; border-radius:16px; background:transparent; }
 footer { display:flex; justify-content:space-between; gap:16px; padding:0 0 26px; color:var(--muted); font-size:12px; }
-@media (max-width:760px) { .topbar-inner,.page,footer { width:min(100% - 24px,1180px); } .intro-card { flex-direction:column; padding:21px; } .details-grid { grid-template-columns:1fr; } iframe { height:920px; } footer { flex-direction:column; } }
+@media (max-width:760px) { .topbar-inner,.page,footer { width:min(100% - 24px,1180px); } .intro-card { flex-direction:column; padding:21px; } .details-grid { grid-template-columns:1fr; } iframe { height:1600px; } footer { flex-direction:column; } }
